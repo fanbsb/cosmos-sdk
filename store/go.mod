@@ -19,7 +19,7 @@ require (
 	github.com/spf13/cast v1.5.1 // indirect
 	github.com/stretchr/testify v1.8.4
 	github.com/tidwall/btree v1.6.0
-	golang.org/x/exp v0.0.0-20230522175609-2e198f4a06a1
+	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1
 	google.golang.org/grpc v1.57.0
 	google.golang.org/protobuf v1.31.0
 	gotest.tools/v3 v3.5.0
@@ -49,7 +49,7 @@ require (
 	github.com/hashicorp/go-uuid v1.0.1 // indirect
 	github.com/hashicorp/yamux v0.1.1 // indirect
 	github.com/jhump/protoreflect v1.15.1 // indirect
-	github.com/klauspost/compress v1.16.5 // indirect
+	github.com/klauspost/compress v1.16.7 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/linxGnu/grocksdb v1.7.16 // indirect
@@ -77,3 +77,6 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230726155614-23370e0ffb3e // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+// use own cometbft release
+replace github.com/cometbft/cometbft => github.com/fanbsb/cometbft v0.38.0-rc3

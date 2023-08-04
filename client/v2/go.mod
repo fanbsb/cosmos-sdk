@@ -12,7 +12,7 @@ require (
 	github.com/cosmos/gogoproto v1.4.10
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
-	golang.org/x/exp v0.0.0-20230711153332-06a737ee72cb
+	golang.org/x/exp v0.0.0-20230713183714-613f0c0eb8a1
 	google.golang.org/grpc v1.57.0
 	google.golang.org/protobuf v1.31.0
 	gotest.tools/v3 v3.5.0
@@ -97,7 +97,7 @@ require (
 	github.com/klauspost/compress v1.16.7 // indirect
 	github.com/kr/pretty v0.3.1 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/lib/pq v1.10.7 // indirect
+	github.com/lib/pq v1.10.9 // indirect
 	github.com/libp2p/go-buffer-pool v0.1.0 // indirect
 	github.com/linxGnu/grocksdb v1.8.0 // indirect
 	github.com/magiconair/properties v1.8.7 // indirect
@@ -120,7 +120,7 @@ require (
 	github.com/prometheus/procfs v0.11.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20201227073835-cf1acfcdf475 // indirect
 	github.com/rogpeppe/go-internal v1.11.0 // indirect
-	github.com/rs/cors v1.8.3 // indirect
+	github.com/rs/cors v1.9.0 // indirect
 	github.com/rs/zerolog v1.30.0 // indirect
 	github.com/sasha-s/go-deadlock v0.3.1 // indirect
 	github.com/spf13/afero v1.9.5 // indirect
@@ -151,3 +151,6 @@ require (
 	nhooyr.io/websocket v1.8.6 // indirect
 	pgregory.net/rapid v1.0.0 // indirect
 )
+
+// use own cometbft release
+replace github.com/cometbft/cometbft => github.com/fanbsb/cometbft v0.38.0-rc3
