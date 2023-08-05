@@ -666,7 +666,7 @@ func (n *Network) LatestHeight() (int64, error) {
 	ticker := time.NewTicker(time.Second)
 	defer ticker.Stop()
 
-	timeout := time.NewTimer(time.Second * 5)
+	timeout := time.NewTimer(time.Second * 15)
 	defer timeout.Stop()
 
 	var latestHeight int64
