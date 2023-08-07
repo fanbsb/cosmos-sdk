@@ -3,7 +3,7 @@ version: "3"
 services:
   simdnode0:
     container_name: simdnode0
-    image: "cosmossdk/simd"
+    image: "philipfan/cosmossdk-simd:latest"
     environment:
       - DEBUG=1
       - ID=0
@@ -17,6 +17,7 @@ services:
       - "1317:1317"
       - "9090:9090"
       - "2345:2345"
+    command: ["simd", "start", "--home=/data/node0/simd"]
     volumes:
       - ./.testnets:/data:Z
     networks:
@@ -25,7 +26,7 @@ services:
 
   simdnode1:
     container_name: simdnode1
-    image: "cosmossdk/simd"
+    image: "philipfan/cosmossdk-simd:latest"
     environment:
       - DEBUG=0
       - ID=1
@@ -39,6 +40,7 @@ services:
       - "1318:1317"
       - "9091:9090"
       - "2346:2345"
+    command: ["simd", "start", "--home=/data/node1/simd"]
     volumes:
       - ./.testnets:/data:Z
     networks:
@@ -47,7 +49,7 @@ services:
 
   simdnode2:
     container_name: simdnode2
-    image: "cosmossdk/simd"
+    image: "philipfan/cosmossdk-simd:latest"
     environment:
       - DEBUG=0
       - ID=2
@@ -63,13 +65,14 @@ services:
       - "2347:2345"
     volumes:
       - ./.testnets:/data:Z
+    command: ["simd", "start", "--home=/data/node2/simd"]
     networks:
       localnet:
         ipv4_address: 192.168.10.4
 
   simdnode3:
     container_name: simdnode3
-    image: "cosmossdk/simd"
+    image: "philipfan/cosmossdk-simd:latest"
     environment:
       - DEBUG=0
       - ID=3
@@ -83,6 +86,7 @@ services:
       - "1320:1317"
       - "9093:9090"
       - "2348:2345"
+    command: ["simd", "start", "--home=/data/node3/simd"]
     volumes:
       - ./.testnets:/data:Z
     networks:
